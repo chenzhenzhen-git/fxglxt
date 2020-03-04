@@ -1,0 +1,15 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /fxglxt
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/fxglxt?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: root
+    password: root
+    hikari:
+      connection-init-sql: SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: com.example.demo.model
